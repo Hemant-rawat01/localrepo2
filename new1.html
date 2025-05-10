@@ -1,1 +1,60 @@
-<p>hiii</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>SMS</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Add Student</a></li>
+      <li><a href="#">View Students</a></li>
+      <li><a href="#">Attendance</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h1>Student Dashboard</h1>
+
+    <section class="add-student-form">
+      <h2>Add New Student</h2>
+      <form action="/add_student" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="rollno" placeholder="Roll Number" required>
+        <input type="text" name="class" placeholder="Class" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Add Student</button>
+      </form>
+    </section>
+
+    <section class="student-table">
+      <h2>All Students</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example Data -->
+          <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>10-A</td>
+            <td>john@example.com</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>
